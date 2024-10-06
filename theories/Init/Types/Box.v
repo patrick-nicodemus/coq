@@ -21,3 +21,6 @@ Section BoxSortPoly.
     box : A -> Box A.
 
 End BoxSortPoly.
+Require Export Stdlib.Compat.Coq820.
+
+#[export] Set Warnings "-deprecated-since-8.20".

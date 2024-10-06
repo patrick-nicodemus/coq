@@ -20,3 +20,4 @@ Notation True := unit@{Prop|}.
 
 Register unit as core.unit.type.
 Register tt as core.unit.tt.
+#[export] Set Warnings "-deprecated-since-8.21".
