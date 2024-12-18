@@ -10,7 +10,7 @@ Require Stdlib.Init.Byte .
 Require Stdlib.Strings.Byte .
 Require Import Stdlib.micromega.ZifyClasses Stdlib.micromega.Lia.
 
-Notation byte := Stdlib.Init.Byte.byte.
+Notation byte := Corelib.Init.Byte.byte.
 
 Module byte.
   Definition unsigned(b: byte): Z := Z.of_N (Byte.to_N b).
