@@ -128,8 +128,6 @@
 
 /theories/Corelib/Classes/        @rocq-prover/typeclasses-maintainers
 
-/theories/Reals/   @coq/reals-library-maintainers
-
 /theories/Corelib/Compat/  @rocq-prover/compat-maintainers
 
 /plugins/btauto/          @rocq-prover/btauto-maintainers
