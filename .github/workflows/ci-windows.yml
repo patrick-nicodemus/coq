@@ -1,4 +1,4 @@
-name: Windows CI
+name: Github CI
 
 on: [push, pull_request]
 
@@ -6,21 +6,32 @@ permissions:
   contents: read
 
 jobs:
-  Windows:
-    name: Windows
-    runs-on: windows-latest
+  build:
     strategy:
-      fail-fast: false
       matrix:
-        architecture:
-          # - '32'
-          - '64'
+        include:
+          - name: macOS
+            os: macos-latest
+            test_disabled:
+            # We exclude the coq-core package
+            packages: ./coqide-server.opam ./rocq*.opam
+          - name: Windows
+            os: windows-latest
+            test_disabled: misc coq-makefile precomputed-time-tests
+            # we don't support rocqide on Windows yet, so we filter it, see #20631
+            packages: ./coqide-server.opam ./rocq-*.opam
+      fail-fast: false
 
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 45
     steps:
-      - name: Set git to use LF
-        run: |
-          git config --global core.autocrlf false
-          git config --global core.eol lf
+      - name: 🐛 Special macOS Config
+        if: matrix.os == 'macos-latest'
+        run: brew install gnu-time
+
+      - name: 🔭 Checkout code
+        uses: actions/checkout@v4
 
       - name: Git checkout
         uses: actions/checkout@v3
@@ -53,6 +64,14 @@ jobs:
       - name: Upload Installer
         uses: actions/upload-artifact@v3
         with:
-          name: windows-installer
-          path: artifacts
-          if-no-files-found: error
+          ocaml-compiler: 4.14
+          dune-cache: true
+
+      - name: 🐫🐪🐫 Get Rocq dependencies
+        run: opam install --deps-only ${{ matrix.packages }}
+
+      - name: 🧱 Build Rocq
+        run: opam exec -- make world
+
+      - name: 🐛 Test Rocq
+        run: opam exec -- make -j 4 -C test-suite DISABLED_SUBSYSTEMS='${{ matrix.test_disabled }}'
