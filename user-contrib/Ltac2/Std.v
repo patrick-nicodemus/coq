@@ -58,7 +58,10 @@ Ltac2 Type red_flags := {
 
 Ltac2 Type 'a not_implemented.
 
+(** Documentation of this type is at https://rocq-prover.org/doc/master/refman/proof-engine/tactics.html#intropatterns *)
 Ltac2 Type rec intro_pattern := [
+  (** [IntroForthcoming true] represents the single-star pattern [*].
+      [IntroForthcoming false] represents the double-star pattern [**]. *)
 | IntroForthcoming (bool)
 | IntroNaming (intro_pattern_naming)
 | IntroAction (intro_pattern_action)
