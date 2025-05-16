@@ -74,4 +74,4 @@ jobs:
         run: opam exec -- make world
 
       - name: 🐛 Test Rocq
-        run: opam exec -- make -j 4 -C test-suite DISABLED_SUBSYSTEMS='${{ matrix.test_disabled }}'
+        run: opam exec -- make -j 4 -C test-suite TIMED=1 DISABLED_SUBSYSTEMS='${{ matrix.test_disabled }}'
