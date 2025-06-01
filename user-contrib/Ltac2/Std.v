@@ -67,12 +67,12 @@ Ltac2 Type rec intro_pattern := [
 | IntroAction (intro_pattern_action)
 ]
 with intro_pattern_naming := [
-| IntroIdentifier (ident)
-| IntroFresh (ident)
-| IntroAnonymous
+| IntroIdentifier (ident) (** e.g., [intros x] *)
+| IntroFresh (ident) (** e.g. [intros ?prefix] *)
+| IntroAnonymous (** [intros ?] *)
 ]
 with intro_pattern_action := [
-| IntroWildcard
+| IntroWildcard (** intros _ *)
 | IntroOrAndPattern (or_and_intro_pattern)
 | IntroInjection (intro_pattern list)
 | IntroApplyOn ((unit -> constr), intro_pattern)
