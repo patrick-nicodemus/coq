@@ -124,23 +124,23 @@
 
 ########## Standard library and plugins ##########
 
-/theories/         @rocq-prover/stdlib-maintainers
+/theories/Corelib/         @rocq-prover/stdlib-maintainers
 
-/theories/Classes/        @rocq-prover/typeclasses-maintainers
+/theories/Corelib/Classes/        @rocq-prover/typeclasses-maintainers
 
 /theories/Reals/   @coq/reals-library-maintainers
 
-/theories/Compat/  @rocq-prover/compat-maintainers
+/theories/Corelib/Compat/  @rocq-prover/compat-maintainers
 
 /plugins/btauto/          @rocq-prover/btauto-maintainers
 
 /plugins/cc/           @rocq-prover/cc-maintainers
 
 /plugins/derive/       @rocq-prover/derive-maintainers
-/theories/derive/      @rocq-prover/derive-maintainers
+/theories/Corelib/derive/      @rocq-prover/derive-maintainers
 
 /plugins/extraction/         @rocq-prover/extraction-maintainers
-/theories/extraction/        @rocq-prover/extraction-maintainers
+/theories/Corelib/extraction/        @rocq-prover/extraction-maintainers
 
 /plugins/firstorder/          @rocq-prover/firstorder-maintainers
 
@@ -155,10 +155,10 @@
 /plugins/ring/  @rocq-prover/ring-maintainers
 
 /plugins/ssrmatching/  @rocq-prover/ssreflect-maintainers
-/theories/ssrmatching/ @rocq-prover/ssreflect-maintainers
+/theories/Corelib/ssrmatching/ @rocq-prover/ssreflect-maintainers
 
 /plugins/ssr/          @rocq-prover/ssreflect-maintainers
-/theories/ssr/         @rocq-prover/ssreflect-maintainers
+/theories/Corelib/ssr/         @rocq-prover/ssreflect-maintainers
 
 /test-suite/ssr/       @rocq-prover/ssreflect-maintainers
 
@@ -167,7 +167,7 @@
 /plugins/rtauto/       @rocq-prover/rtauto-maintainers
 
 /plugins/ltac2/        @rocq-prover/ltac2-maintainers
-/user-contrib/Ltac2    @rocq-prover/ltac2-maintainers
+/theories/Ltac2    @rocq-prover/ltac2-maintainers
 
 ########## Pretyper ##########
 
@@ -206,17 +206,16 @@
 /plugins/syntax/int63_syntax_plugin.mllib  @rocq-prover/number-maintainers
 /plugins/syntax/number.ml            @rocq-prover/number-maintainers
 /plugins/syntax/number_string_notation_plugin.mllib  @rocq-prover/number-maintainers
-/user-contrib/Ltac2/Int.v            @rocq-prover/number-maintainers
 /test-suite/output/*Number*          @rocq-prover/number-maintainers
 /test-suite/primitive/float/         @rocq-prover/number-maintainers
 /test-suite/primitive/sint63/        @rocq-prover/number-maintainers
 /test-suite/primitive/uint63/        @rocq-prover/number-maintainers
-/theories/Init/Decimal.v             @rocq-prover/number-maintainers
-/theories/Init/Hexadecimal.v         @rocq-prover/number-maintainers
-/theories/Init/Nat.v                 @rocq-prover/number-maintainers
-/theories/Init/Number.v              @rocq-prover/number-maintainers
-/theories/Numbers/                   @rocq-prover/number-maintainers
-/theories/Floats/                    @rocq-prover/number-maintainers
+/theories/Corelib/Init/Decimal.v             @rocq-prover/number-maintainers
+/theories/Corelib/Init/Hexadecimal.v         @rocq-prover/number-maintainers
+/theories/Corelib/Init/Nat.v                 @rocq-prover/number-maintainers
+/theories/Corelib/Init/Number.v              @rocq-prover/number-maintainers
+/theories/Corelib/Numbers/                   @rocq-prover/number-maintainers
+/theories/Corelib/Floats/                    @rocq-prover/number-maintainers
 
 ########## Tools ##########
 
