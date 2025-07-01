@@ -27,14 +27,14 @@ body:
   attributes:
     label: Version of Rocq / Coq where this bug occurs
     description: |
-      You can get this information by running `coqtop -v`.
+      You can get this information by running `rocq -v` or `coqtop -v`.
       Feel free to provide a comma-separated list or a range of versions if you can reproduce the bug on several versions of Rocq / Coq.
     placeholder: X.Y.Z
 - type: input
   attributes:
     label: Interface of Rocq / Coq where this bug occurs
     description: |
-      e.g. Proof General, VsCoq, CoqIDE, etc
+      e.g. Proof General, VsRocq, RocqIDE, etc
       Can be omitted if the issue occurs with `rocq compile`
 - type: input
   attributes:
