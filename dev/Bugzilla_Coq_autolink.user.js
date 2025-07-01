@@ -8,7 +8,7 @@
 // ==/UserScript==
 
 var regex = /#(\d+)/g;
-var substr = '<a href="https://github.com/coq/coq/pull/$1">$&</a>';
+var substr = '<a href="https://github.com/rocq-prover/rocq/pull/$1">$&</a>';
 
 function doNode(node)
 {

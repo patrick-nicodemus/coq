@@ -36,7 +36,7 @@ sys.path.append(os.path.abspath('../tools/'))
 sys.path.append(os.path.abspath('../../config/'))
 
 # Disable the correct_copyright_year misfeature from Sphinx
-# See https://github.com/coq/coq/issues/7378
+# See https://github.com/rocq-prover/rocq/issues/7378
 sphinx.config.correct_copyright_year = lambda *args, **kwargs: None
 
 import coq_config
@@ -199,7 +199,7 @@ html_theme = 'sphinx_rtd_theme'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-PDF_URL = "https://github.com/coq/coq/releases/download/V{version}/coq-{version}-reference-manual.pdf"
+PDF_URL = "https://github.com/rocq-prover/rocq/releases/download/V{version}/rocq-{version}-reference-manual.pdf"
 html_theme_options = {
     'collapse_navigation': False
 }

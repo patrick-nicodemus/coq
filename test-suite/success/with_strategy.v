@@ -45,7 +45,7 @@ Goal id 0 = 0.
                                       l [id]
                                       (let idx := smart_global:(id) in
                                        cbv [idx];
-                                       (* This should succeed, but doesn't, basically due to https://github.com/coq/coq/issues/11202 *)
+                                       (* This should succeed, but doesn't, basically due to https://github.com/rocq-prover/rocq/issues/11202 *)
                                        assert_fails
                                          (let idx := smart_global:(id) in
                                           with_strategy
@@ -223,7 +223,7 @@ Tactic Notation "with_strategy1" strategy_level_or_var(l) "[" ne_smart_global_li
 Tactic Notation "with_strategy2" strategy_level(l) "[" constr(v) "]" tactic3(tac) := with_strategy l [ v ] tac.
 Tactic Notation "with_strategy3" strategy_level_or_var(l) "[" constr(v) "]" tactic3(tac) := with_strategy l [ v ] tac.
 
-(* [with_strategy0] should work, but it doesn't, due to a combination of https://github.com/coq/coq/issues/11202 and https://github.com/coq/coq/issues/11209 *)
+(* [with_strategy0] should work, but it doesn't, due to a combination of https://github.com/rocq-prover/rocq/issues/11202 and https://github.com/rocq-prover/rocq/issues/11209 *)
 Opaque id.
 Goal id 0 = 0.
   Fail (* should work, not Fail *) with_strategy0 opaque [id] idtac.
@@ -245,7 +245,7 @@ Goal id 0 = 0.
   Fail (* should work, not Fail *) with_strategy0 opaque [id] idtac.
   Fail (* should work, not Fail *) with_strategy0 expand [id] idtac.
   Fail (* should work, not Fail *) assert_succeeds unfold_id idtac.
-  (* This should succeed, but doesn't, basically due to https://github.com/coq/coq/issues/11202 *)
+  (* This should succeed, but doesn't, basically due to https://github.com/rocq-prover/rocq/issues/11202 *)
   Fail let idx := smart_global:(id) in
        with_strategy0 expand [idx] idtac.
   reflexivity.
@@ -293,7 +293,7 @@ Goal id 0 = 0.
   reflexivity.
 Qed.
 
-(* [with_strategy1] should work, but it doesn't, due to a combination of https://github.com/coq/coq/issues/11202 and https://github.com/coq/coq/issues/11209 *)
+(* [with_strategy1] should work, but it doesn't, due to a combination of https://github.com/rocq-prover/rocq/issues/11202 and https://github.com/rocq-prover/rocq/issues/11209 *)
 Opaque id.
 Goal id 0 = 0.
   Fail (* should work, not Fail *) with_strategy1 opaque [id] idtac.
@@ -397,7 +397,7 @@ Goal id 0 = 0.
                                 (with_strategy2
                                    expand [id]
                                    (assert_succeeds unfold_id))))))))))).
-  (* This should succeed, but doesn't, basically due to https://github.com/coq/coq/issues/11202 *)
+  (* This should succeed, but doesn't, basically due to https://github.com/rocq-prover/rocq/issues/11202 *)
   Fail let idx := smart_global:(id) in
        with_strategy2 expand [idx] idtac.
   reflexivity.
@@ -501,7 +501,7 @@ Goal id 0 = 0.
                                 (with_strategy3
                                    expand [id]
                                    (assert_succeeds unfold_id))))))))))).
-  (* This should succeed, but doesn't, basically due to https://github.com/coq/coq/issues/11202 *)
+  (* This should succeed, but doesn't, basically due to https://github.com/rocq-prover/rocq/issues/11202 *)
   Fail let idx := smart_global:(id) in
        with_strategy3 expand [idx] idtac.
   reflexivity.
@@ -573,5 +573,5 @@ Goal id 0 = 0.
   reflexivity.
 Qed.
 
-(* Fake out coqchk to work around what is essentially COQBUG(https://github.com/coq/coq/issues/12200) *)
+(* Fake out coqchk to work around what is essentially COQBUG(https://github.com/rocq-prover/rocq/issues/12200) *)
 Reset Initial.

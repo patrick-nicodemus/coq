@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Coq Bugzilla autolink
 // @namespace   SkySkimmer
-// @include     https://github.com/coq/coq/*
+// @include     https://github.com/rocq-prover/rocq/*
 // @description Makes BZ#XXXX into links to bugzilla for GitHub
 // @version     1
 // @grant       none

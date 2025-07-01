@@ -234,7 +234,7 @@ function coqbot_update_comment() {
         comment_text="${comment_text}${nl}${nl}${start_code_block}${nl}$(git log -n 1 "${old_coq_commit}")${nl}${end_code_block}${nl}</details>"
         comment_text="${comment_text}${nl}${nl}<details><summary>New Coq version ${new_coq_commit}</summary>"
         comment_text="${comment_text}${nl}${nl}${start_code_block}${nl}$(git log -n 1 "${new_coq_commit}")${nl}${end_code_block}${nl}</details>"
-        comment_text="${comment_text}${nl}${nl}[Diff: ${bt}${old_coq_commit}..${new_coq_commit}${bt}](https://github.com/coq/coq/compare/${old_coq_commit}..${new_coq_commit})"
+        comment_text="${comment_text}${nl}${nl}[Diff: ${bt}${old_coq_commit}..${new_coq_commit}${bt}](https://github.com/rocq-prover/rocq/compare/${old_coq_commit}..${new_coq_commit})"
 
         # if there's a comment id, we update the comment while we're
         # in progress; otherwise, we wait until the end to post a new
@@ -265,7 +265,7 @@ if [[ $ZULIP_BENCH_BOT ]]; then
     pr_num=${pr_full%%:*}
     pr_msg=${pr_full#*:}
     zulip_header="Bench at $CI_JOB_URL
-Testing [$pr_msg](https://github.com/coq/coq/pull/$pr_num)
+Testing [$pr_msg](https://github.com/rocq-prover/rocq/pull/$pr_num)
 On packages $coq_opam_packages
 "
 
@@ -315,7 +315,7 @@ zulip_autofail() {
 }
 if [[ $zulip_post ]]; then trap zulip_autofail ERR; fi
 
-# see https://github.com/coq/coq/pull/15807
+# see https://github.com/rocq-prover/rocq/pull/15807
 if [ "$(ulimit -s)" != "unlimited" ]; then
   ulimit -S -s $((2 * $(ulimit -s)))
 fi

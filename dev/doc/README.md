@@ -49,7 +49,7 @@ show the available targets. See [`build-system.dune.md`](build-system.dune.md)
 to learn more about them.
 
 ```
-$ git clone https://github.com/coq/coq.git
+$ git clone https://github.com/rocq-prover/rocq.git
 $ cd coq
 $ make
     # to get an idea of the available targets
@@ -82,7 +82,7 @@ To learn how to run the test suite, you can read
 ## Development environment + tooling
 
 - [`Merlin`](https://github.com/ocaml/merlin) for autocomplete.
-- [Wiki pages on tooling containing `emacs`, `vim`, and `git` information](https://github.com/coq/coq/wiki/DevelSetup)
+- [Wiki pages on tooling containing `emacs`, `vim`, and `git` information](https://github.com/rocq-prover/rocq/wiki/DevelSetup)
 - [`ocamlformat`](https://github.com/ocaml-ppx/ocamlformat) provides
   support for automatic formatting of OCaml code. To use it please run
   `dune build @fmt`, see `ocamlformat`'s documentation for more help.

@@ -745,7 +745,7 @@ gallina_ext: [
 | REPLACE "Coercion" by_notation ":" coercion_class ">->" coercion_class
 | WITH "Coercion" smart_global OPT [ ":" coercion_class ">->" coercion_class ]
 
-(* semantically restricted per https://github.com/coq/coq/pull/12936#discussion_r492705820 *)
+(* semantically restricted per https://github.com/rocq-prover/rocq/pull/12936#discussion_r492705820 *)
 (* global OPT univ_decl is just ident_decl, the first OPT is moved to the rule above *)
 | REPLACE "Coercion" global OPT [ OPT univ_decl def_body ]
 | WITH "Coercion" ident_decl def_body
@@ -2256,7 +2256,7 @@ induction_clause_list: [
 | LIST1 induction_clause SEP "," OPT induction_principle
 ]
 
-(* see https://github.com/coq/coq/pull/14179#discussion_r654000296 *)
+(* see https://github.com/rocq-prover/rocq/pull/14179#discussion_r654000296 *)
 as_or_and_ipat: [
 | DELETE "as" or_and_intropattern_loc
 | DELETE "as" equality_intropattern

@@ -48,7 +48,7 @@ from .notations.sphinx import sphinxify
 from .notations.plain import stringify_with_ellipses
 
 # FIXME: Patch this in Sphinx
-# https://github.com/coq/coq/issues/12361
+# https://github.com/rocq-prover/rocq/issues/12361
 if sphinx_version >= (4, 5):
     from sphinx.writers.latex import CR
 
@@ -118,7 +118,7 @@ def make_math_node(latex, docname, nowrap):
     return node
 
 # To support any character in tacn, ... names.
-# see https://github.com/coq/coq/pull/13564
+# see https://github.com/rocq-prover/rocq/pull/13564
 def make_id(tag):
     return tag.replace(" ", "-")
 

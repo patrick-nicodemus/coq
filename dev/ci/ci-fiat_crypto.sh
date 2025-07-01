@@ -12,7 +12,7 @@ if [ "$DOWNLOAD_ONLY" ]; then exit 0; fi
 
 # We need a larger stack size to not overflow ocamlopt+flambda when
 # building the executables.
-# c.f. https://github.com/coq/coq/pull/8313#issuecomment-416650241
+# c.f. https://github.com/rocq-prover/rocq/pull/8313#issuecomment-416650241
 stacksize=32768
 
 # fiat-crypto is not guaranteed to build with the latest version of

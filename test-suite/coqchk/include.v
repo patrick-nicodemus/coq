@@ -1,4 +1,4 @@
-(* See https://github.com/coq/coq/issues/5747 *)
+(* See https://github.com/rocq-prover/rocq/issues/5747 *)
 Module Type S.
 End S.
 

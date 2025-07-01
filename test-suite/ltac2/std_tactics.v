@@ -52,7 +52,7 @@ Qed.
 
 
 (* Test that by clause of assert doesn't eat all semicolons:
-   https://github.com/coq/coq/issues/17491 *)
+   https://github.com/rocq-prover/rocq/issues/17491 *)
 Goal forall (a: nat), a = a.
 Proof.
   intros.

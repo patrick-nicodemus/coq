@@ -19,7 +19,7 @@ Fail Ltac2 Notation ":::7" x(tactic) "+7" y(tactic) : 7 := ().
 Goal True.
   ex0 :::0 0 +0 0.
   ex1 :::0 0 +0 0.
-  (*ex2 :::0 0 +0 0.*) (* fails with an anomaly, cf COQBUG(https://github.com/coq/coq/issues/12807) *)
+  (*ex2 :::0 0 +0 0.*) (* fails with an anomaly, cf COQBUG(https://github.com/rocq-prover/rocq/issues/12807) *)
   (*ex3 :::0 0 +0 0.*)
   ex4 :::0 0 +0 0.
   ex5 :::0 0 +0 0.

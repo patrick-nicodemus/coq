@@ -313,7 +313,7 @@ Qed.
 End TestGeneric2.
 
 Section TestPreOrder.
-(* inspired by https://github.com/coq/coq/pull/10022#issuecomment-530101950 *)
+(* inspired by https://github.com/rocq-prover/rocq/pull/10022#issuecomment-530101950 *)
 
 Require Import Morphisms.
 

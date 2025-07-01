@@ -31,7 +31,7 @@ Definition tricky_floats : list float
           ; 1; -1; 0.5; 2; -0.5; -2
           (* numbers from fma tests 264-266 from testsuite/tests/fma/fma.ml,
        cf
-       https://github.com/coq/coq/issues/17893#issuecomment-1654794043. These
+       https://github.com/rocq-prover/rocq/issues/17893#issuecomment-1654794043. These
        tests trigger the broken implementations of Cygwin64, mingw-w64
        (x86_64) and VS2013-2017. *)
           ; 0x3.bd5b7dde5fddap-496
@@ -255,7 +255,7 @@ Ltac2 report_result (red : string) (result : constr) (specTy : constr) (spec : c
        | EQ ?x ?y
          => if Constr.equal x y
             then None
-            else (* if unify_bool x y (* commented out because of https://github.com/coq/coq/pull/17899 *)
+            else (* if unify_bool x y (* commented out because of https://github.com/rocq-prover/rocq/pull/17899 *)
                  then Some (fprintf "%s failed to fully reduce, leaving over %t (expected: %t), in %t %t" red x y spec specTy)
                  else *) Some (fprintf "%s failed!%sGot: %t%sExpected: %t%sIn %t %t" red (lf ()) x (lf ()) y (lf ()) spec specTy)
        | IFF (?x = ?x') (?y = ?y')
@@ -267,7 +267,7 @@ Ltac2 report_result (red : string) (result : constr) (specTy : constr) (spec : c
             if Bool.and (Bool.equal (Constr.equal x x') (Constr.equal y y'))
                  (Bool.equal (unify_bool x x') (unify_bool y y'))
             then None
-            else (* if Bool.equal (unify_bool x x') (unify_bool y y') (* commented out because of https://github.com/coq/coq/pull/17899 *)
+            else (* if Bool.equal (unify_bool x x') (unify_bool y y') (* commented out because of https://github.com/rocq-prover/rocq/pull/17899 *)
                  then Some (fprintf "%s failed to fully reduce, leaving over %t (expected something equivalent to: %t), in %t %t" red lhs rhs spec specTy)
                  else *) Some (fprintf "%s failed!%sGot: %t%sExpected something equivalent to: %t%s(both sides %s unify)%sIn %t %t" red (lf ()) lhs (lf ()) rhs (lf ()) descr (lf ()) spec specTy)
        | _ => Control.throw (PrimFloat_Test_InternalError (fprintf "Unhandled result %t (on %t : %t with %s)" result spec specTy red))
@@ -383,7 +383,7 @@ Definition combine_annotations (orig : list ANNOTATED_BARE_SPEC) (result : list 
     indifferent.  So we maintain both [_red] versions for [simpl] and
     [cbn] and non-[_red] versions for [native_compute]. *)
 (** We make [_red] definitions [Let] statements, to work around
-    COQBUG(https://github.com/coq/coq/issues/4790) and avoid stack
+    COQBUG(https://github.com/rocq-prover/rocq/issues/4790) and avoid stack
     overflows in COQNATIVE *)
 
 (** * 1. Test the specs *)

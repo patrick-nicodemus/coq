@@ -2,7 +2,7 @@
 
 Declare Scope opaque_scope.
 
-(* https://github.com/coq/coq/pull/8064#discussion_r202497516 *)
+(* https://github.com/rocq-prover/rocq/pull/8064#discussion_r202497516 *)
 Module Test1.
   Axiom hold : forall {A B C}, A -> B -> C.
   Definition opaque3 (x : Number.int) : Number.int := hold x (fix f (x : nat) : nat := match x with O => O | S n => S (f n) end).
@@ -11,7 +11,7 @@ Module Test1.
   Fail Check 1%opaque.
 End Test1.
 
-(* https://github.com/coq/coq/pull/8064#discussion_r202497990 *)
+(* https://github.com/rocq-prover/rocq/pull/8064#discussion_r202497990 *)
 Module Test2.
   Axiom opaque4 : option Number.int.
   Definition opaque6 (x : Number.int) : option Number.int := opaque4.
@@ -336,7 +336,7 @@ Module Test17.
 End Test17.
 
 Module Test18.
-  (** Test https://github.com/coq/coq/issues/9840 *)
+  (** Test https://github.com/rocq-prover/rocq/issues/9840 *)
   Record Q := { num : nat ; den : nat ; reduced : Nat.gcd num den = 1 }.
   Declare Scope Q_scope.
   Delimit Scope Q_scope with Q.
@@ -376,7 +376,7 @@ End Test18.
 Require Import Stdlib.Lists.List.
 Require Import Stdlib.ZArith.ZArith.
 Module Test19.
-  (** Test another thing related to https://github.com/coq/coq/issues/9840 *)
+  (** Test another thing related to https://github.com/rocq-prover/rocq/issues/9840 *)
   Record Zlike := { summands : list Z }.
   Declare Scope Zlike_scope.
   Delimit Scope Zlike_scope with Zlike.

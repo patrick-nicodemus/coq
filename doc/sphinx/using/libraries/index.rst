@@ -34,8 +34,8 @@ to consider:
   trust issues by running :ref:`coqchk` on compiled files produced from Coq
   scripts that load plugins.  (`coqchk` doesn't load plugins, so they won't be
   part of trusted code base.)
-- Plugins that aren't in Coq's
-  `CI (continuous integration) system <https://github.com/coq/coq/blob/master/dev/ci/README-users.md>`_
+- Plugins that aren't in Rocq's
+  `CI (continuous integration) system <https://github.com/rocq-prover/rocq/blob/master/dev/ci/README-users.md>`_
   are more likely
   to break across major versions due to source code changes to Coq.  You may want to
   consider this before adopting a new plugin for your project.

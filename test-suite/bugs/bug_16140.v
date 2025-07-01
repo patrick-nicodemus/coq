@@ -1,4 +1,4 @@
-(* Test regression https://github.com/coq/coq/issues/16140
+(* Test regression https://github.com/rocq-prover/rocq/issues/16140
    where congruence produces ill-typed terms *)
 
 Inductive wrap1 : Type :=

@@ -24,7 +24,7 @@ TO_SED_IN_BOTH=(
     -e s'/[0-9]*\.[0-9]*//g' # the precise timing numbers vary, so we strip them out
     -e s'/^-*$/------/g' # When none of the numbers get over 100 (or 1000, in per-file), the width of the table is different, so we normalize the number of dashes for table separators
     -e s'/+/-/g' # some code lines don't really change, but this can show up as either -0m00.01s or +0m00.01s, so we need to normalize the signs; additionally, some N/A's show up where we expect to get -∞ on the per-line file, and so the ∞-replacement gets the sign wrong, so we must correct it
-    -e s'/[0-9]//g' # sometimes the time is under 1 minute, sometimes it's over 1 minute, so we want to remove/normalize both instances; see https://github.com/coq/coq/issues/5675#issuecomment-487378622
+    -e s'/[0-9]//g' # sometimes the time is under 1 minute, sometimes it's over 1 minute, so we want to remove/normalize both instances; see https://github.com/rocq-prover/rocq/issues/5675#issuecomment-487378622
 )
 
 TO_SED_IN_PER_FILE=(

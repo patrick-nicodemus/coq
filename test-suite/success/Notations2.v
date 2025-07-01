@@ -97,7 +97,7 @@ Notation "'FUNNAT' i => t" := (fun i : nat => i = t) (at level 200).
 Notation "'Funnat' i => t" := (FUNNAT i => t + i%nat) (at level 200).
 
 (* 11. Notations with needed factorization of a recursive pattern *)
-(* See https://github.com/coq/coq/issues/6078#issuecomment-342287412 *)
+(* See https://github.com/rocq-prover/rocq/issues/6078#issuecomment-342287412 *)
 Module M11.
 Notation "[:: x1 ; .. ; xn & s ]" := (cons x1 .. (cons xn s) ..).
 Notation "[:: x1 ; .. ; xn ]" := (cons x1 .. (cons xn nil) ..).

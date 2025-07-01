@@ -334,7 +334,7 @@ build:base+async:
     COQ_DUNE_EXTRA_OPT: "-async"
   after_script:
     - dmesg > dmesg.txt
-  allow_failure: true # See https://github.com/coq/coq/issues/9658
+  allow_failure: true # See https://github.com/rocq-prover/rocq/issues/9658
   only:
     variables:
       - $UNRELIABLE =~ /enabled/ && $FULL_CI == "true"
@@ -684,7 +684,7 @@ library:ci-fiat_crypto_legacy:
 
 # We cannot use flambda due to
 # https://github.com/ocaml/ocaml/issues/7842, see
-# https://github.com/coq/coq/pull/11916#issuecomment-609977375
+# https://github.com/rocq-prover/rocq/pull/11916#issuecomment-609977375
 library:ci-fiat_crypto_ocaml:
   extends: .ci-template-flambda
   needs:

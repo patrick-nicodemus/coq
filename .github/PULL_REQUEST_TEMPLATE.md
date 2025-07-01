@@ -23,14 +23,14 @@ Fixes / closes #????
 
 <!-- Pointers to relevant developer documentation:
 
-Contributing guide: https://github.com/coq/coq/blob/master/CONTRIBUTING.md
+Contributing guide: https://github.com/rocq-prover/rocq/blob/master/CONTRIBUTING.md
 
-Test-suite: https://github.com/coq/coq/blob/master/test-suite/README.md
+Test-suite: https://github.com/rocq-prover/rocq/blob/master/test-suite/README.md
 
-Changelog: https://github.com/coq/coq/blob/master/doc/changelog/README.md
+Changelog: https://github.com/rocq-prover/rocq/blob/master/doc/changelog/README.md
 
-Building the doc: https://github.com/coq/coq/blob/master/doc/README.md
-Sphinx: https://github.com/coq/coq/blob/master/doc/sphinx/README.rst
-doc_gram: https://github.com/coq/coq/blob/master/doc/tools/docgram/README.md
+Building the doc: https://github.com/rocq-prover/rocq/blob/master/doc/README.md
+Sphinx: https://github.com/rocq-prover/rocq/blob/master/doc/sphinx/README.rst
+doc_gram: https://github.com/rocq-prover/rocq/blob/master/doc/tools/docgram/README.md
 
-Overlays: https://github.com/coq/coq/blob/master/dev/ci/user-overlays/README.md
+Overlays: https://github.com/rocq-prover/rocq/blob/master/dev/ci/user-overlays/README.md

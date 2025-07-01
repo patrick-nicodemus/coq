@@ -91,14 +91,14 @@ deprecation warning tells what to do.
 
 - The Windows installer CI build has been moved from the custom
   workers based on Inria cloud to a standard Github Action, see
-  https://github.com/coq/coq/pull/12425 .
+  https://github.com/rocq-prover/rocq/pull/12425 .
 
-  Fixes https://github.com/coq/coq/issues/6807
-  https://github.com/coq/coq/issues/7428
-  https://github.com/coq/coq/issues/8046
-  https://github.com/coq/coq/issues/8622
-  https://github.com/coq/coq/issues/9401
-  https://github.com/coq/coq/issues/11073 .
+  Fixes https://github.com/rocq-prover/rocq/issues/6807
+  https://github.com/rocq-prover/rocq/issues/7428
+  https://github.com/rocq-prover/rocq/issues/8046
+  https://github.com/rocq-prover/rocq/issues/8622
+  https://github.com/rocq-prover/rocq/issues/9401
+  https://github.com/rocq-prover/rocq/issues/11073 .
 
 - Location of Coq's runtime environment and files is now handled by a
   new library, `coq-core.boot`, which provides a more uniform and
@@ -414,7 +414,7 @@ Libobject
 AST
 
 - Minor changes in the AST have been performed, for example
-  https://github.com/coq/coq/pull/9165
+  https://github.com/rocq-prover/rocq/pull/9165
 
 Implicit Arguments
 
@@ -690,7 +690,7 @@ Caveats:
 
 ### Bug tracker
 
-As of 18/10/2017, Coq uses [GitHub issues](https://github.com/coq/coq/issues)
+As of 18/10/2017, Coq uses [GitHub issues](https://github.com/rocq-prover/rocq/issues)
 as bug tracker.
 Old bug reports were migrated from Bugzilla to GitHub issues using
 [this migration script](https://gist.github.com/Zimmi48/d923e52f64fe17c72852d9c148bfcdc6#file-bugzilla2github)

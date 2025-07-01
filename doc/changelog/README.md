@@ -34,9 +34,9 @@ Here is a summary of the structure of a changelog entry:
 - **Added / Changed / Deprecated / Fixed / Removed:**
   Description of the changes, with possible link to
   :ref:`relevant-section` of the updated documentation
-  (`#PRNUM <https://github.com/coq/coq/pull/PRNUM>`_,
-  [fixes `#ISSUE1 <https://github.com/coq/coq/issues/ISSUE1>`_
-  [ and `#ISSUE2 <https://github.com/coq/coq/issues/ISSUE2>`_],]
+  (`#PRNUM <https://github.com/rocq-prover/rocq/pull/PRNUM>`_,
+  [fixes `#ISSUE1 <https://github.com/rocq-prover/rocq/issues/ISSUE1>`_
+  [ and `#ISSUE2 <https://github.com/rocq-prover/rocq/issues/ISSUE2>`_],]
   by Full Name[, with help / review of Full Name]).
 ```
 
