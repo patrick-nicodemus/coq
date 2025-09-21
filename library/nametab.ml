@@ -109,7 +109,7 @@ let stdlib_id = Id.of_string "Stdlib"
 
 let warn_deprecated_dirpath_Coq =
   CWarnings.create ~name:"deprecated-dirpath-Coq"
-    ~category:Deprecation.Version.v8_21
+    ~category:Deprecation.Version.v9_0
     (fun (l, id) ->
       let l' = List.rev (stdlib_id :: List.tl (List.rev l)) in
       Pp.(DirPath.(print (make l)) ++ str "." ++ Id.print id ++ spc ()
